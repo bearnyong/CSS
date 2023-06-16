@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="style_introduction.css">
+    <!-- 폰트 연결-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&family=Oswald:wght@500&family=Roboto+Mono:wght@200&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- js 파일 연결 -->
+    <title>About</title>
+
+
+    <!--Index-->
+    <style>
+        .full {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #4f5941;
+        }
+
+        body {
+            margin: 0;
+            margin-right: 0;
+        }
+
+        /* 프로필 이미지 */
+        .img {
+            justify-content: center;
+        }
+
+        #porfile-img {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #4f5941;
+            transform: scale(1);
+            /* 이미지 사이즈 고정 */
+            border-radius: 70%
+        }
+
+        .menu-bar {
+            position: fixed;
+            border: 0;
+            background-color: #D8E6C2;
+            display: block;
+            width: 25%;
+            float: left;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .index {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 목차 */
+        .index h3 {
+            color: white;
+            opacity: 0.7;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 목차 각 항목 반응형 커서 */
+        .index h3:hover {
+            font-size: 1.1em;
+            opacity: 1;
+            text-shadow: 0.7px 0.7px 0.7px #000;
+        }
+    </style>
+
+    <!--hihi-->
+    <style>
+        .hihi {
+            /*padding-top: 200px;
+            flex-grow: 2;*/
+            width: 75%;
+            background-color: #f1f6e7;
+            float: right;
+            height: 100%;
+        }
+
+        /*About*/
+        .name {
+            font-size: 65px;
+            font-weight: 900;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .contacts {
+            font-size: 15px;
+            opacity: 0.5;
+            font-family: 'Roboto Mono', monospace;
+            font-style: italic;
+        }
+
+        .main-introduction {
+            font-size: 17px;
+            font-family: 'Noto Sans KR', sans-serif;
+            opacity: 0.8;
+        }
+
+        /* sns 픽토그램 */
+        .fa-brands {
+            color: #4f5941;
+            opacity: 0.4
+        }
+
+        .fa-solid {
+            color: #4f5941;
+            opacity: 0.4
+        }
+
+        .sns-pictogram i {
+            margin-right: 40px;
+        }
+
+        /*픽토그램 반응형 커서*/
+        footer i:hover {
+            transform: translate(0, -3px);
+        }
+
+        /*Experience*/
+        .experience img {
+            margin-right: 7px;
+            margin-top: 10px;
+            border: 5px;
+            border-style: solid;
+            border-color: lightgray;
+            border-image-outset: 10px;
+            width: 120px;
+            height: 150px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* 커서 올릴 시 이미지 크게(모든 이미지 파일에 적용) */
+        img:hover {
+            transform: scale(1.7);
+            -webkit-transform: scale(1.7);
+            /* 크롬 */
+            -moz-transform: scale(1.7);
+            /* 파이어폭스 */
+            -o-transform: scale(1.7);
+            /* 오페라 */
+            z-index: 1;
+            align-items: center;
+        }
+
+        .experience p {
+            font-size: 55px;
+            font-weight: 700;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* for layout */
+        .contents1 {
+            width: 700px;
+        }
+
+        .contents2 {
+            width: 700;
+            margin-left: 120px;
+            margin-top: 30px;
+        }
+
+        /* 일한 기간 */
+        .year {
+            font-family: 'Oswald', sans-serif;
+            font-size: 17px;
+            opacity: 0.5;
+        }
+
+
+        /*Education*/
+        .major {
+            font-size: 65px;
+            font-weight: 700;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+
+        /*Interests*/
+        .whatilove-text {
+            font-size: 55px;
+            font-weight: 700;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .whatilove-img {
+            margin-bottom: 20px;
+        }
+
+        .whatilove-img img {
+            width: 150px;
+            height: 150px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* 하단 코멘트 */
+        .interests .comment {
+            font-size: 16px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <!--Index-->
+    <header>
+    </header>
+    <div class="full">
+        <section class="menu-bar">
+            <div class="index">
+                <!-- 프로필 이미지 -->
+                <div class="img">
+                    <img id="porfile-img" src="img/nyong.png" style="width: 151px; height: 151px;">
+                </div>
+                <br>
+                <!-- 목차 내용 -->
+                <h3 class="click">ABOUT</h3>
+                <h3 class="click">EXPERIENCE</h3>
+                <h3 class="click">EDUCATION</h3>
+                <h3 class="click">INTERESTS</h3>
+            </div>
+        </section>
+
+
+        <!--화면 분할을 위한 클래스 hihi-->
+        <div class="hihi">
+            <!--간격주기...-->
+            <div style="padding-left: 15%;"> 
+            <!--About-->
+            <section class="about">
+                <!-- 이름 -->
+                <header class="name">
+                    <p><span style="color: #8d987d;">KO, </span>&nbsp<span style="color: #8d987d;">Min-young</span></p>
+                    <!-- 연락처 -->
+                    <div class="contacts">
+                        <p>🎂2000.02.16</p>
+                        <p>📞+(82)10-9099-8895</p>
+                        <p>📧rhalsdud216@gmail.com</p>
+                    </div>
+                </header>
+                <br><br>
+                <!-- 소개글 -->
+                <article class="main-introduction">
+                    <p>안녕하세요! 고민영 입니다...<br>
+                        안녕하세요! 고민영 입니다...
+                    </p>
+                    <br>
+                    <p style="opacity: 1">앞으로 잘 부탁드리며, 저에 대해 더 알고싶으시다면 스크롤을 내려주세요!🙋‍♀️</p>
+                </article>
+                <br><br>
+                <!-- SNS 픽토그램 -->
+                <footer class="sns-pictogram">
+                    <a href='https://instagram.com/dumibell?igshid=YmMyMTA2M2Y='><i
+                            class="fa-brands fa-instagram fa-4x"></i></a>
+
+                    <a href="https://github.com/Dumibell"><i class="fa-brands fa-github fa-4x"></i></a>
+                </footer>
+            </section>
+
+
+            <!--Experience-->
+            <section class="experience">
+                <!-- 상단 텍스트 & 사진 -->
+                <div class="contents1">
+                    <p class="title"><span>Hilton</span>&nbsp<span style="color: #2B3856;">Garden Inn</span>&nbsp<span
+                            class="year">~2021.12</span></p>
+                    <img src="images/working.jpg">
+                    <img src="images/IMG_6066.jpg">
+                    <img src="images/IMG_9982.jpg">
+                    <img src="images/IMG_3666.jpg">
+                </div>
+                <!-- 하단 텍스트 & 사진 -->
+                <div class="contents2">
+                    <p class="title"><span>Alpensia</span>&nbsp<span
+                            style="color: #2B3856;">Pyeongchang</span>&nbsp<span class="year">~2020.11</p>
+                    <img style="width: 150px;" class="photos" src="images/alpen.JPG">
+                    <img src="images/IMG_9565.jpg">
+                    <img src="images/sheep.jpeg">
+                    <img src="images/IMG_9869.jpg">
+                </div>
+            </section>
+
+
+            <!--Education-->
+            <section class="education">
+                <!-- 전공 & 부전공 -->
+                <p class="major"><span>Tourism</span>&nbsp<span style="color: #2B3856;">Management</span>&nbsp<span
+                        class="comments">major</span></p>
+
+                <p class="major"><span>Food</span>&nbsp<span style="color: #2B3856;">Nuturition</span>&nbsp<span
+                        class="comments">minor</span></p>
+            </section>
+
+
+            <!--Interests-->
+            <section class="interests">
+                <header>
+                    <!-- 제목 -->
+                    <p style="margin: 10px;" class="whatilove-text"><span>WHAT</span>&nbsp<span
+                            style="color: #2B3856;">I
+                            LOVE</span>
+                    <p>
+                </header>
+                <article>
+                    <!-- 이미지 -->
+                    <div class="whatilove-img">
+                        <img src="images/dumi1.jpg">
+                        <img src="images/knitting.JPG">
+                        <img src="images/dumibell.JPG">
+                        <img src="images/bike.jpeg">
+                        <img src="images/bell1.jpg">
+                        <img src="images/dumi2.jpg">
+                        <img src="images/piano.jpeg">
+                        <img src="images/passport.jpg">
+                        <img src="images/thread.JPG">
+                        <img src="images/bell2.jpg">
+                    </div>
+                    <!-- 코멘트 -->
+                    <p class="comment">Things that make me happy✨<br>
+                        :knitting, bicycle riding on sunny days, playing the piano, traveling with no plans, and my only
+                        Dumi&Bell</p>
+                </article>
+            </section>
+        </div>
+        </div>
+    </div>
+
+    <!--스크롤 자바스크립트-->
+    <script>
+        const clicks = document.querySelectorAll(".click")
+        const sections = document.querySelectorAll("section")
+        const firstTop = sections[0].offsetTop
+        const secondTop = sections[1].offsetTop
+        const thirdTop = sections[2].offsetTop
+        const fourthTop = sections[3].offsetTop
+
+
+        clicks[0].onclick = function () {
+            window.scroll({ top: firstTop, behavior: 'smooth' })
+        }
+        clicks[1].onclick = function () {
+            window.scroll({ top: secondTop, behavior: 'smooth' })
+        }
+        clicks[2].onclick = function () {
+            window.scroll({ top: thirdTop, behavior: 'smooth' })
+        }
+        clicks[3].onclick = function () {
+            window.scroll({ top: fourthTop, behavior: 'smooth' })
+        }
+    </script>
+    <script type="text/javascript" src="scroll.js"></script>
+</body>
+
+</html>
